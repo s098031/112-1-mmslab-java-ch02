@@ -1,19 +1,10 @@
 public class hw12 {
     public static void main(String[] args) {
-        int num1 = 10;
-        int num2 = 5;
-        System.out.println("num1㎝num2贺笲衡:");
-        System.out.println("num1+num2单" + (num1 + num2));
-        System.out.println("num1-num2单" + (num1 - num2));
-        System.out.println("num1*num2单" + (num1 * num2));
-        System.out.println("num1/num2单" + (num1 / num2));
-        System.out.println("num1%num2单" + (num1 % num2));
-        int a = 0;
-        int b = 0;
-        int c = 0;
-        b = a++;
-        c = ++a;
-        System.out.println("琌﹚ぇ患糤┮b" + b);
-        System.out.println("琌患糤ぇ﹚┮c" + c);
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=3;j++){
+                System.out.println("i圈:"+i+";j是:"+j);
+            }
+        }
+        System.out.println("迴圈結束");
     }
 }

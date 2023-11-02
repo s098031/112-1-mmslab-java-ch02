@@ -1,8 +1,26 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class hw6 {
-    public static void main(String[] args) {
-        System.out.println("十進位的10是" + 10);
-        System.out.println("八進位的10是" + 010);
-        System.out.println("十六進位的十是" + 0x10);
-        System.out.println("十六進位的F是" + 0xF);
+    public static void main(String[] args) throws IOException {
+        System.out.println("請輸入a或b");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str1 = br.readLine();
+        char letter = str1.charAt(0);
+        switch (letter) {
+            case 'a': {
+                System.out.println("輸入的是a");
+                break;
+            }
+            case 'b': {
+                System.out.println("輸入的是b");
+                break;
+            }
+            default: {
+                System.out.println("請輸入a或b");
+                break;
+            }
+        }
     }
 }

@@ -1,6 +1,27 @@
-public class hw1 {
-    public static void main(String[] args) {
-        System.out.print("歡迎使用Java!");
-        System.out.print("開始使用Java吧!");
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class hw20 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("請輸入五個人的分數");
+        int test[] = new int[5];
+        for (int i = 0; i < test.length; i++) {
+            String str = br.readLine();
+            test[i] = Integer.parseInt(str);
+        }
+        for (int s = 0; s < test.length; s++) {
+            for (int t = s + 1; t < test.length; t++) {
+                if (test[t] > test[s]) {
+                    int tmp = test[t];
+                    test[t] = test[s];
+                    test[s] = tmp;
+                }
+            }
+        }
+        for (int i = 0; i < test.length; i++) {
+            System.out.println("第"+(i+1)+"名的分數是"+test[i]);
+        }
     }
 }

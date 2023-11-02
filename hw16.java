@@ -1,6 +1,13 @@
-public class hw1 {
+import java.lang.reflect.Array;
+
+public class hw16 {
     public static void main(String[] args) {
-        System.out.print("歡迎使用Java!");
-        System.out.print("開始使用Java吧!");
+        int[] intArray = (int[]) Array.newInstance(int.class, 3);
+        Array.set(intArray, 0, 123);
+        Array.set(intArray, 1, 456);
+        Array.set(intArray, 2, 789);
+        System.out.println("intArray[0]="+ Array.get(intArray, 0));
+        System.out.println("intArray[1]="+ Array.get(intArray, 1));
+        System.out.println("intArray[2]="+ Array.get(intArray, 2));
     }
 }

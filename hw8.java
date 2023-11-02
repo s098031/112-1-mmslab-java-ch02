@@ -1,9 +1,15 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class hw8 {
-    public static void main(String[] args) {
-        int num = 3;
-        System.out.println("變數num的值是" + num);
-        num = 5;
-        System.out.println("更新變數num的值");
-        System.out.println("變數num更新後的值是" + num);
+    public static void main(String[] args) throws IOException {
+        System.out.println("請問想要選擇哪條路線?");
+        System.out.println("請輸入整數");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str1 = br.readLine();
+        int res = Integer.parseInt(str1);
+        char ans = (res == 1) ? 'A' : 'B';
+        System.out.println("選擇了" + ans + "路線");
     }
 }
